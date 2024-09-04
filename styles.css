@@ -38,7 +38,7 @@ html {
 
 body {
   height: 100vh;
-  background-image: url('imgs/historic-back.jpg'), url('https://raw.githubusercontent.com/Ayoub-Younes/build-a-cash-register/master/imgs/background.jpg');
+  background-image: url('https://raw.githubusercontent.com/Ayoub-Younes/random-quote-machine/master/imgs/historic-back.jpg'), url('imgs/historic-back.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
