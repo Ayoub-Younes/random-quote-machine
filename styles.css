@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Arcade Regular'; 
+  src: url('fonts/Arcade Regular.TTF'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278976/Arcade_Regular_uvchxs.TTF'); 
+}
+@font-face {
+  font-family: 'MorrisRoman-Black'; 
+  src: url('fonts/MorrisRoman-Black.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725447816/MorrisRomanAlternate-Black_le6v0r.ttf'); 
+}
+@font-face {
+  font-family: 'square_sans_serif'; 
+  src: url('fonts/square_sans_serif_7.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725278975/square_sans_serif_7_qavwf9.ttf'); 
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay'; 
+  src: url('fonts/PlayfairDisplay.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725449165/PlayfairDisplay_itik8h.ttf'); 
+}
+@font-face {
+  font-family: 'Nebula Mirthful'; 
+  src: url('Nebula Mirthful.ttf'), url('https://res.cloudinary.com/dmf7frt4a/raw/upload/v1725447816/Nebula_Mirthful_qxwk8b.ttf'); 
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e8e7e9, #ba8721);
+  font-family: "Arcade Regular", cursive;
+  font-size: 20px;
+}
+
+
+body {
+  height: 100vh;
+  background-image: url('imgs/historic-back.jpg'), url('https://raw.githubusercontent.com/Ayoub-Younes/build-a-cash-register/master/imgs/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  position: relative;
+  top: 10px;
+  display: block;
+  width: 5em;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.7); 
+  border: 2px solid rgb(105,70,47);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px; 
+  width: 50%; 
+}
+
+#text{
+  font-family: 'PlayfairDisplay';
+  margin: 10px;
+  color: black;
+}
+
+#author{
+  margin: 20px;
+  align-self: flex-end;
+  font-family: 'Nebula Mirthful';
+  font-weight: bold;
+  color: black;
+}
+
+#new-quote{
+  margin: 20px;
+
+  padding: 10px 20px;
+  background-color: rgb(170,139,93, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'MorrisRoman-Black';
+  color: black;
+}
+
+
+#new-quote:hover {
+  background-color:   rgb(170,139,93, 0.8);;
+}
+
+.buttons{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.icons{
+  margin: 20px;
+  margin-top: 30px;
+}
+
+a{
+  text-decoration: none;
+  color:  rgb(170,139,93, 0.7);
+  padding: 0.3em;
+}
