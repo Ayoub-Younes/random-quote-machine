@@ -28,51 +28,57 @@
 
 
 html {
+  display: flex ;
   width: 100%;
-  height: 100%;
+  height:  100%;
   background: linear-gradient(#e8e7e9, #ba8721);
   font-family: "Arcade Regular", cursive;
-  font-size: 20px;
 }
+
 
 
 body {
-  height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/Ayoub-Younes/random-quote-machine/master/imgs/historic-back.jpg'), url('imgs/historic-back.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: clamp(1em, 4vw, 1.3em);
 }
 
-img {
-  position: relative;
-  top: 10px;
-  display: block;
-  width: 5em;
-  height: auto;
-  margin-bottom: 20px;
-  opacity: 0.7;
+body.loading {
+  display: none;
 }
+body.loaded {
+  display: flex;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.7); 
   border: 2px solid rgb(105,70,47);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  max-width: 600px; 
-  width: 50%; 
+  max-width: 600px;
+  width: 90%; 
 }
+
 
 #text{
   font-family: 'PlayfairDisplay';
@@ -90,12 +96,12 @@ img {
 
 #new-quote{
   margin: 20px;
-
   padding: 10px 20px;
   background-color: rgb(170,139,93, 0.5);
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'MorrisRoman-Black';
+  font-size: 0.8em;
   color: black;
 }
 
@@ -105,12 +111,16 @@ img {
 }
 
 .buttons{
-width: 100%;
-display: flex;
-justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   margin: 20px;
   margin-top: 30px;
 }
@@ -118,5 +128,20 @@ justify-content: space-between;
 a{
   text-decoration: none;
   color:  rgb(170,139,93, 0.7);
-  padding: 0.3em;
+}
+
+
+@media screen  and (max-width: 530px) {
+  #new-quote {
+    padding: 10px 7px;
+  }
+}
+
+@media screen  and (max-width: 470px) {
+  .wrapper {
+    padding: 25px;
+  }
+  #author, #new-quote, .icons {
+    margin: 10px;
+  }
 }

@@ -16,4 +16,22 @@ fetch('https://dummyjson.com/quotes')
   
   .catch(error => console.error('Error fetching quotes:', error));
 
+document.addEventListener('DOMContentLoaded', function () {
+  const img = document.getElementById('background-img');
+
+  function showContent() {
+    document.body.classList.remove('loading');
+    document.body.classList.add('loaded');
+  }
+
+  if (img.complete) {
+    showContent();
+  } else {
+    img.onload = showContent;
+  }
+
+  setTimeout(showContent, 3000); 
+});
+
+
 
